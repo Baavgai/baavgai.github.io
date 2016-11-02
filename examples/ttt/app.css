@@ -1,0 +1,28 @@
+h1 {
+  text-align: center;
+}
+
+#section {
+  margin: 0 auto;
+  width: 660px;
+  clear: both;
+}
+
+#buttons2 {
+  float: right;
+  width: 175px;
+}
+
+#board2 {
+  float: left;
+  width: 460px;
+}
+
+#button2 {
+  display: block;
+  width: 150px;
+}
+
+#board {
+  padding: 1em;
+}
