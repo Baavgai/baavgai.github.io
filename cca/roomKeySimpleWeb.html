@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Room With a Key</title>
+  <link rel="stylesheet" type="text/css" href="monitor.css" />
+</head>
+
+<body>
+  <div id="monitor">
+  </div>
+  <script src="./monitor.js"></script>
+  <script src="./roomKeySimpleLib.js"></script>
+  <script language="javascript">
+    var gameState = initState();
+    var Monitor = createMonitor({
+      height: 20,
+      notifyInput: function (cmd) {
+        console.log("input", cmd);
+        gameAction(function (msg) { Monitor.write(msg + "\n"); }, gameState, cmd)
+
+      }
+    });
+
+    window.addEventListener('load', function () {
+      intro(Monitor.write);
+      Monitor.write();
+    });
+  </script>
+</body>
+
+</html>
